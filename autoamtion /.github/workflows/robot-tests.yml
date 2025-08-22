@@ -1,4 +1,5 @@
-name: Run Robot Framework Tests
+
+        uname: Run Robot Framework Tests
 
 on:
   push:
@@ -30,7 +31,7 @@ jobs:
       # Run Robot Framework tests
       - name: Run Robot Framework Tests
         run: |
-          robot -d results tests/
+          robot -d results automation/google.robot
 
       # Upload results as artifacts
       - name: Upload Robot Results
@@ -38,3 +39,4 @@ jobs:
         with:
           name: robot-results
           path: results/
+
